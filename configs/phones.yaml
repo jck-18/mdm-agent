@@ -1,0 +1,14 @@
+# configs/phones.yaml
+
+category: phones
+
+# List your two Gemini API keys here:
+api_token_primary:  "AIzaSyCF8qX-WgtjiNcs5qjRkF77e35_eIfPKCo"
+api_token_secondary: "AIzaSyA0cym0jtA3LUQfuhvlP2OAf6Dexg_UO0Q"
+
+urls:
+  - source: amazon
+    url: "https://www.amazon.in/Samsung-Galaxy-Smartphone-Black-Storage/dp/B0CS69QQTG/"
+
+  - source: flipkart
+    url: "https://www.flipkart.com/samsung-galaxy-s24-5g-onyx-black-128-gb/p/itmc8add40b88912"

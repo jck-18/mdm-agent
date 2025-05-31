@@ -1,0 +1,13 @@
+# configs/watch.yaml
+
+category: watch
+
+api_token_primary:  "AIzaSyCF8qX-WgtjiNcs5qjRkF77e35_eIfPKCo"
+api_token_secondary: "AIzaSyA0cym0jtA3LUQfuhvlP2OAf6Dexg_UO0Q"
+
+urls:
+  - source: amazon
+    url: "https://www.amazon.in/Samsung-Galaxy-Classic-Compatible-Android/dp/B0CCV592KF"
+
+  - source: flipkart
+    url: "https://www.flipkart.com/samsung-galaxy-watch6-classic-lte/p/itm0188047c07b62"

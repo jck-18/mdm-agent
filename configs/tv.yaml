@@ -1,0 +1,13 @@
+# configs/tv.yaml
+
+category: tv
+
+api_token_primary:  "AIzaSyCF8qX-WgtjiNcs5qjRkF77e35_eIfPKCo"
+api_token_secondary: "AIzaSyA0cym0jtA3LUQfuhvlP2OAf6Dexg_UO0Q"
+
+urls:
+  - source: amazon
+    url: "https://www.amazon.in/Samsung-Crystal-4K-Vision-Pro-108-CM-43-Inch/dp/B09PXYZABC/"
+
+  - source: flipkart
+    url: "https://www.flipkart.com/samsung-crystal-4k-vision-pro-108-cm-43-inch-ultra-hd-4k-led-smart-tizen-tv/p/itme92fd82fd18b8"
