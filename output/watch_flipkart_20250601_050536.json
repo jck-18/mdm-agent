@@ -1,0 +1,274 @@
+[
+  {
+    "label": "Sales Package",
+    "value": "Smartwatch, Wireless charger, Quick Setup Guide"
+  },
+  {
+    "label": "Model Number",
+    "value": "SM-R960"
+  },
+  {
+    "label": "Model Name",
+    "value": "Galaxy Watch6 Classic Bluetooth"
+  },
+  {
+    "label": "Dial Color",
+    "value": "Silver"
+  },
+  {
+    "label": "Dial Shape",
+    "value": "Round"
+  },
+  {
+    "label": "Strap Color",
+    "value": "Silver"
+  },
+  {
+    "label": "Strap Material",
+    "value": "Leather"
+  },
+  {
+    "label": "Size",
+    "value": "47mm"
+  },
+  {
+    "label": "Touchscreen",
+    "value": "Yes"
+  },
+  {
+    "label": "Water Resistant",
+    "value": "Yes"
+  },
+  {
+    "label": "Water Resistance Depth",
+    "value": "50 m"
+  },
+  {
+    "label": "Usage",
+    "value": "Fitness & Outdoor"
+  },
+  {
+    "label": "Dial Material",
+    "value": "Stainless Steel"
+  },
+  {
+    "label": "Ideal For",
+    "value": "Men & Women"
+  },
+  {
+    "label": "Compatible OS",
+    "value": "Android"
+  },
+  {
+    "label": "Brand Strap Color",
+    "value": "Silver"
+  },
+  {
+    "label": "Closure",
+    "value": "Pin Buckle"
+  },
+  {
+    "label": "Sensor",
+    "value": "Accelerometer, Gyro, Barometer, Ambient Light Sensor, Compass, 3D Hall Sensor"
+  },
+  {
+    "label": "Compatible Device",
+    "value": "Android Smartphones & Tablets"
+  },
+  {
+    "label": "Notification",
+    "value": "Yes"
+  },
+  {
+    "label": "Notification Type",
+    "value": "Text, Vibrate, Ring"
+  },
+  {
+    "label": "Battery Type",
+    "value": "Lithium Ion"
+  },
+  {
+    "label": "Battery Life",
+    "value": "Up to 40 hours"
+  },
+  {
+    "label": "Rechargeable Battery",
+    "value": "Yes"
+  },
+  {
+    "label": "Charger Type",
+    "value": "Wireless Charger"
+  },
+  {
+    "label": "Operating System",
+    "value": "Wear OS"
+  },
+  {
+    "label": "RAM",
+    "value": "2 GB"
+  },
+  {
+    "label": "Number of Cores",
+    "value": "2"
+  },
+  {
+    "label": "Processor Name",
+    "value": "Exynos W930"
+  },
+  {
+    "label": "Processor Speed",
+    "value": "1.4 GHz"
+  },
+  {
+    "label": "Internal Memory",
+    "value": "16 GB"
+  },
+  {
+    "label": "Call Function",
+    "value": "Yes"
+  },
+  {
+    "label": "Bluetooth",
+    "value": "Yes"
+  },
+  {
+    "label": "Wi-Fi",
+    "value": "Yes"
+  },
+  {
+    "label": "GPS",
+    "value": "Yes"
+  },
+  {
+    "label": "Messaging Support",
+    "value": "Yes"
+  },
+  {
+    "label": "Bluetooth Version",
+    "value": "v5.3"
+  },
+  {
+    "label": "Email Support",
+    "value": "Yes"
+  },
+  {
+    "label": "Operating Range",
+    "value": "10 m"
+  },
+  {
+    "label": "Call Features",
+    "value": "Answer, Reject, Silent Calls, Speed Dial"
+  },
+  {
+    "label": "Display Resolution",
+    "value": "480 x 480 Pixel"
+  },
+  {
+    "label": "Display Size",
+    "value": "1.47 inch"
+  },
+  {
+    "label": "Display Type",
+    "value": "Super AMOLED"
+  },
+  {
+    "label": "Other Camera Features",
+    "value": "Mode Switch, Angle Change, Zoom-in/out"
+  },
+  {
+    "label": "Backlight Display",
+    "value": "Yes"
+  },
+  {
+    "label": "Scratch Resistant",
+    "value": "Yes"
+  },
+  {
+    "label": "Calorie Count",
+    "value": "Yes"
+  },
+  {
+    "label": "Step Count",
+    "value": "Yes"
+  },
+  {
+    "label": "Heart Rate Monitor",
+    "value": "Yes"
+  },
+  {
+    "label": "Other Fitness Features",
+    "value": "Personalized HR Zones"
+  },
+  {
+    "label": "Date & Time Display",
+    "value": "Yes"
+  },
+  {
+    "label": "Compass",
+    "value": "Yes"
+  },
+  {
+    "label": "Calendar",
+    "value": "Yes"
+  },
+  {
+    "label": "Alarm Clock",
+    "value": "Yes"
+  },
+  {
+    "label": "Chronograph",
+    "value": "Yes"
+  },
+  {
+    "label": "Language",
+    "value": "Multi Language"
+  },
+  {
+    "label": "Number of Buttons",
+    "value": "2"
+  },
+  {
+    "label": "Other Watch Functions",
+    "value": "One UI 5, Samsung Health, Multi 3P Apps, Galaxy Connected Experience, Safety & Emergency, Personalized HR Zone"
+  },
+  {
+    "label": "Speaker",
+    "value": "Yes"
+  },
+  {
+    "label": "Microphone",
+    "value": "Yes"
+  },
+  {
+    "label": "Audio Features",
+    "value": "Voice Recording"
+  },
+  {
+    "label": "Gesture Control",
+    "value": "Answer Calls, Dismiss alerts & calls, Quick Launch"
+  },
+  {
+    "label": "Voice Control",
+    "value": "Yes"
+  },
+  {
+    "label": "Width",
+    "value": "46.5 mm"
+  },
+  {
+    "label": "Height",
+    "value": "46.5 mm"
+  },
+  {
+    "label": "Thickness",
+    "value": "10.9 mm"
+  },
+  {
+    "label": "Weight",
+    "value": "59 mm"
+  },
+  {
+    "label": "Domestic Warranty",
+    "value": "1 Year"
+  }
+]

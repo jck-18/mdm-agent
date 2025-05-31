@@ -2,7 +2,6 @@
 
 category: phones
 
-# List your two Gemini API keys here:
 api_token_primary:  "AIzaSyCF8qX-WgtjiNcs5qjRkF77e35_eIfPKCo"
 api_token_secondary: "AIzaSyA0cym0jtA3LUQfuhvlP2OAf6Dexg_UO0Q"
 
