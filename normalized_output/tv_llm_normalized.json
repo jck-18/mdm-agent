@@ -1,0 +1,220 @@
+{
+  "20250601": {
+    "brand": "samsung",
+    "model_number": "qa55ls03baklxl",
+    "model_name": [
+      "frame tv 55” 2022",
+      "qa43ls03baklxl"
+    ],
+    "model_year": "2022",
+    "dimensions": {
+      "with_stand": "969.5 mm x 196.8 mm",
+      "without_stand": "969.5 mm x 557.8 mm x 24.9 mm",
+      "verified": "1237.9 x 708.8 x 24.9 mm"
+    },
+    "weight": {
+      "with_stand": "8.9 kg",
+      "without_stand": "8.6 kg",
+      "verified": "16.9 kg"
+    },
+    "storage": [
+      "16 GB",
+      "16.0 GB"
+    ],
+    "ram": "2.5 GB",
+    "os": "tizen",
+    "hardware_interface": [
+      "usb",
+      "hdmi"
+    ],
+    "graphics_coprocessor": "quantum processor 4k",
+    "tuner_technology": "dvb-t",
+    "response_time": "6 milliseconds",
+    "resolution": [
+      "4k",
+      "3840 x 2160 pixels",
+      "ultra hd (4k) (3840 x 2160)"
+    ],
+    "compatible_devices": "gaming console",
+    "special_features": [
+      "matte display",
+      "customizable frame",
+      "art store",
+      "modern frame design"
+    ],
+    "mounting_hardware": [
+      "1 led tv",
+      "1 power cord",
+      "1 remote control",
+      "2 stand-top (table top will be provided at the time of installation)"
+    ],
+    "number_of_items": "1",
+    "remote_control_description": "voice assistant key | hotkey for prime video, netflix and zee5",
+    "display": {
+      "type": [
+        "qled",
+        "hdr 10+"
+      ],
+      "size": [
+        "55 inches",
+        "108 cm (43 inch)"
+      ],
+      "colour_screen": true,
+      "viewing_angle": "178 degrees",
+      "image_aspect_ratio": "16:09",
+      "aspect_ratio": "16:9"
+    },
+    "supported_image_types": [
+      "gif",
+      "jpeg"
+    ],
+    "audio": {
+      "input_compatible_with_item": "auxiliary",
+      "output_mode": "surround",
+      "supported_formats": [
+        "mp3_audio",
+        "wma"
+      ],
+      "speaker_surround_sound_channel_configuration": "dolby digital plus",
+      "audio_wattage": "40 watts",
+      "speaker_output_rms": "20 w",
+      "number_of_speakers": "2",
+      "number_of_subwoofers": "0",
+      "subwoofer_output_rms": "0 w",
+      "sound_technology": [
+        "dolby digital plus",
+        "object tracking sound",
+        "q-symphony",
+        "multiroom link",
+        "bluetooth audio",
+        "adaptive sound",
+        "dual audio support (bluetooth)"
+      ]
+    },
+    "video_capture_resolution": "4k",
+    "voltage": "170 volts",
+    "wattage": "40 watts",
+    "power_source": "ac",
+    "batteries": {
+      "included": false,
+      "required": false
+    },
+    "refresh_rate": {
+      "values": [
+        "100 hz",
+        "50 hz"
+      ],
+      "verified": "120 hz"
+    },
+    "total_usb_ports": "2",
+    "charging_port": [
+      "wi-fi",
+      "usb",
+      "ethernet",
+      "hdmi"
+    ],
+    "mounting_type": [
+      "wall mount",
+      "table mount"
+    ],
+    "includes_remote": true,
+    "supports_bluetooth_technology": true,
+    "smart_tv": true,
+    "launch_year": "2022",
+    "series": "the frame",
+    "color": "black",
+    "led_arrangement": "qled",
+    "picture_engine": "quantum processor 4k",
+    "digital_tv_reception": "dvb-t2",
+    "other_smart_features": [
+      "bluetooth",
+      "built-in wi-fi",
+      "auto power off",
+      "game mode",
+      "voice assistant support with remote",
+      "screen mirroring"
+    ],
+    "processor": {
+      "value": "quantum processor 4k",
+      "verified": "quantum processor 4k"
+    },
+    "hdmi_ports": "4 (4 rear)",
+    "usb_ports": "2 (2 side)",
+    "other_connectivity_features": [
+      "ethernet (lan)",
+      "digital audio out (optical)",
+      "rf in (terrestrial/cable input/satellite input)",
+      "hdmi a/return ch. support",
+      "earc",
+      "hdmi quick switch",
+      "anynet plus (hdmi-cec)"
+    ],
+    "supported_apps": [
+      "netflix",
+      "jiohotstar",
+      "prime video",
+      "youtube",
+      "more"
+    ],
+    "other_convenience_features": [
+      "one billion color",
+      "2900 pqi",
+      "hdr 10 plus support",
+      "hlg (hybrid log gamma)",
+      "mega contrast",
+      "supreme uhd dimming",
+      "contrast enhancer",
+      "motion xcelerator turbo plus",
+      "auto motion plus",
+      "led clear motion",
+      "noise reduction",
+      "film mode",
+      "filmmaker mode",
+      "brightness detection",
+      "ai upscale"
+    ],
+    "power_supply": "220 vac 50 hz",
+    "power_consumption": [
+      "120 w",
+      "0.5 w (standby)"
+    ],
+    "warranty": {
+      "summary": "1 year comprehensive warranty on product and 1 year additional on panel",
+      "covered": "all manufacturing defects",
+      "not_covered": "parts and labour costs are covered under warranty against any defect arising out of faulty or defective material or workmanship.",
+      "service_type": "na"
+    },
+    "installation_and_demo_details": "we'll facilitate the installation and demo through authorized service engineer at your convenience. the installation will be done within 48 hours of delivery of the tv. the service engineer will install your new tv, either on wall mount or on table top. installation and demo are provided free of cost. the engineer will also help you understand your new tv's features. the process generally covers: wall-mounted or table-top installation, as requested. physical check of all ports, including power and usb ports. accessories also checked. demonstration of features and settings. quick run-through on how to operate the tv.",
+    "model_name_internal": {
+      "frame tv 55” 2022": "qa55ls03bakxxl",
+      "frame tv 55” 2023": "qa55ls03dakxxl"
+    },
+    "display_internal": "55\" qled, 3840 x 2160",
+    "ports_internal": "hdmi x4, usb x2, ethernet",
+    "connectivity_internal": [
+      "wi-fi 5",
+      "bluetooth 5.2"
+    ],
+    "smart_features_internal": [
+      "art mode",
+      "ambient mode+",
+      "samsung tizen os"
+    ],
+    "_normalization_metadata": {
+      "original_fields": 85,
+      "normalized_fields": 55,
+      "field_retention_ratio": 0.6470588235294118,
+      "source_metadata": {
+        "scraped_fields": 76,
+        "internal_fields": 10,
+        "total_fields": 85,
+        "aggregation_date": "2025-06-02T00:34:25.111116",
+        "sources": [
+          "amazon",
+          "flipkart",
+          "internal_csv"
+        ]
+      }
+    }
+  }
+}
