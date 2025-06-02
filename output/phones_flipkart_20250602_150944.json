@@ -1,0 +1,462 @@
+[
+  {
+    "label": "In The Box",
+    "value": "Handset, Data Cable (Type C-to-C), Sim Ejector Pin"
+  },
+  {
+    "label": "Model Number",
+    "value": "SM-S921BZKBINS"
+  },
+  {
+    "label": "Model Name",
+    "value": "Galaxy S24 5G"
+  },
+  {
+    "label": "Color",
+    "value": "Onyx Black"
+  },
+  {
+    "label": "Browse Type",
+    "value": "Smartphones"
+  },
+  {
+    "label": "SIM Type",
+    "value": "Dual Sim"
+  },
+  {
+    "label": "Hybrid Sim Slot",
+    "value": "No"
+  },
+  {
+    "label": "Touchscreen",
+    "value": "Yes"
+  },
+  {
+    "label": "OTG Compatible",
+    "value": "Yes"
+  },
+  {
+    "label": "Quick Charging",
+    "value": "Yes"
+  },
+  {
+    "label": "Display Size",
+    "value": "15.75 cm (6.2 inch)"
+  },
+  {
+    "label": "Resolution",
+    "value": "2340 x 1080 Pixels"
+  },
+  {
+    "label": "Resolution Type",
+    "value": "Full HD+"
+  },
+  {
+    "label": "Display Type",
+    "value": "Dynamic AMOLED 2X"
+  },
+  {
+    "label": "HD Game Support",
+    "value": "Yes"
+  },
+  {
+    "label": "Display Colors",
+    "value": "16 Million"
+  },
+  {
+    "label": "Other Display Features",
+    "value": "Max Refresh Rate: 120 Hz, Peak Brightness: 2600 nits"
+  },
+  {
+    "label": "Operating System",
+    "value": "Android 14"
+  },
+  {
+    "label": "Processor Brand",
+    "value": "Exynos"
+  },
+  {
+    "label": "Processor Type",
+    "value": "Exynos 2400"
+  },
+  {
+    "label": "Processor Core",
+    "value": "Deca Core"
+  },
+  {
+    "label": "Primary Clock Speed",
+    "value": "3.2 GHz"
+  },
+  {
+    "label": "Secondary Clock Speed",
+    "value": "2.9 GHz"
+  },
+  {
+    "label": "Tertiary Clock Speed",
+    "value": "2.6 GHz"
+  },
+  {
+    "label": "Operating Frequency",
+    "value": "2G GSM: GSM850/GSM900/DCS1800/PCS1900, 3G UMTS: B1(2100)/B2(1900)/B4(AWS)/B5(850)/B8(900), 4G FDD LTE: B1(2100)/B2(1900)/B3(1800)/B4(AWS)/B5(850)/B7(2600)/B8(900)/B12(700)/B13(700)/B17(700)/B18(800)/B19(800)/B20(800)/B25(1900)/B26(850)/B28(700)/B66(AWS-3), 4G TDD LTE: B38(2600)/B39(1900)/B40(2300)/B41(2500), 5G* FDD Sub6: N1(2100)/N2(1900)/N3(1800)/N5(850)/N7(2600)/N8(900)/N12(700)/N20(800)/N25(1900)/N26(850)/N28(700)/N66(AWS-3), 5G* TDD Sub6: N38(2600)/N40(2300)/N41(2500)/N77(3700)/N78(3500)"
+  },
+  {
+    "label": "Internal Storage",
+    "value": "128 GB"
+  },
+  {
+    "label": "RAM",
+    "value": "8 GB"
+  },
+  {
+    "label": "Supported Memory Card Type",
+    "value": "NA"
+  },
+  {
+    "label": "Phone Book Memory",
+    "value": "Yes"
+  },
+  {
+    "label": "Call Log Memory",
+    "value": "Yes"
+  },
+  {
+    "label": "SMS Memory",
+    "value": "Yes"
+  },
+  {
+    "label": "Primary Camera Available",
+    "value": "Yes"
+  },
+  {
+    "label": "Primary Camera",
+    "value": "50MP + 10MP + 12MP"
+  },
+  {
+    "label": "Primary Camera Features",
+    "value": "Triple Camera Setup: 50MP Wide Angle Camera (f/1.8 Aperture) + 10MP Telephoto Camera (f/2.4 Aperture) + 12MP Ultra Wide Camera (f/2.2 Aperture), Features: Auto Focus, OIS, Optical Zoom 3X, Optical Quality Zoom 2X (Enabled by Adaptive Pixel sensor), Dual Tele Zoom System, Nightography, Super HDR, Generative Edit, Edit Suggestion"
+  },
+  {
+    "label": "Optical Zoom",
+    "value": "Yes"
+  },
+  {
+    "label": "Secondary Camera Available",
+    "value": "Yes"
+  },
+  {
+    "label": "Secondary Camera",
+    "value": "12MP Front Camera"
+  },
+  {
+    "label": "Secondary Camera Features",
+    "value": "Front Camera Setup: 12MP (f/2.2 Aperture), Feature: Fixed Focus"
+  },
+  {
+    "label": "Flash",
+    "value": "Rear Camera"
+  },
+  {
+    "label": "HD Recording",
+    "value": "Yes"
+  },
+  {
+    "label": "Full HD Recording",
+    "value": "Yes"
+  },
+  {
+    "label": "Video Recording",
+    "value": "Yes"
+  },
+  {
+    "label": "Video Recording Resolution",
+    "value": "UHD 8K (7680 x 4320) (at 30 fps), FHD (at 240 fps), UHD (at 120 fps), UHD 8K (7680 x 4320) (at 60 fps)"
+  },
+  {
+    "label": "Digital Zoom",
+    "value": "Upto 30X"
+  },
+  {
+    "label": "Image Editor",
+    "value": "Yes"
+  },
+  {
+    "label": "Dual Camera Lens",
+    "value": "Primary Camera"
+  },
+  {
+    "label": "Call Wait/Hold",
+    "value": "Yes"
+  },
+  {
+    "label": "Conference Call",
+    "value": "Yes"
+  },
+  {
+    "label": "Hands Free",
+    "value": "Yes"
+  },
+  {
+    "label": "Video Call Support",
+    "value": "Yes"
+  },
+  {
+    "label": "Call Divert",
+    "value": "Yes"
+  },
+  {
+    "label": "Phone Book",
+    "value": "Yes"
+  },
+  {
+    "label": "Call Timer",
+    "value": "Yes"
+  },
+  {
+    "label": "Speaker Phone",
+    "value": "Yes"
+  },
+  {
+    "label": "Speed Dialing",
+    "value": "Yes"
+  },
+  {
+    "label": "Call Records",
+    "value": "Ongoing"
+  },
+  {
+    "label": "Logs",
+    "value": "Incoming Calls, Outgoing Calls, Missed Calls, Spam Calls"
+  },
+  {
+    "label": "Network Type",
+    "value": "5G, 4G, 3G, 2G"
+  },
+  {
+    "label": "Supported Networks",
+    "value": "5G, 4G LTE, UMTS, GSM"
+  },
+  {
+    "label": "Internet Connectivity",
+    "value": "5G, 4G, 3G, 2G, WiFi, GPRS"
+  },
+  {
+    "label": "3G",
+    "value": "Yes"
+  },
+  {
+    "label": "GPRS",
+    "value": "Yes"
+  },
+  {
+    "label": "Pre-installed Browser",
+    "value": "Google Chrome | Samsung Internet"
+  },
+  {
+    "label": "Micro USB Port",
+    "value": "Yes"
+  },
+  {
+    "label": "Micro USB Version",
+    "value": "USB 3.2 Gen 1"
+  },
+  {
+    "label": "Mini USB Port",
+    "value": "No"
+  },
+  {
+    "label": "Bluetooth Support",
+    "value": "Yes"
+  },
+  {
+    "label": "Bluetooth Version",
+    "value": "v5.3"
+  },
+  {
+    "label": "Wi-Fi",
+    "value": "Yes"
+  },
+  {
+    "label": "Wi-Fi Version",
+    "value": "802.11 a/b/g/n/ac/ax (2.4 GHz |5 GHz|6 GHz), HE160, MIMO, 1024-QAM"
+  },
+  {
+    "label": "Wi-Fi Hotspot",
+    "value": "Yes"
+  },
+  {
+    "label": "Mini HDMI Port",
+    "value": "No"
+  },
+  {
+    "label": "NFC",
+    "value": "Yes"
+  },
+  {
+    "label": "USB Tethering",
+    "value": "Yes"
+  },
+  {
+    "label": "TV Out",
+    "value": "No"
+  },
+  {
+    "label": "Infrared",
+    "value": "No"
+  },
+  {
+    "label": "USB Connectivity",
+    "value": "Yes"
+  },
+  {
+    "label": "Audio Jack",
+    "value": "USB Type-C"
+  },
+  {
+    "label": "Map Support",
+    "value": "Google Maps"
+  },
+  {
+    "label": "GPS Support",
+    "value": "Yes"
+  },
+  {
+    "label": "Smartphone",
+    "value": "Yes"
+  },
+  {
+    "label": "Touchscreen Type",
+    "value": "Capacitive"
+  },
+  {
+    "label": "SIM Size",
+    "value": "Nano Sim"
+  },
+  {
+    "label": "Mobile Tracker",
+    "value": "No"
+  },
+  {
+    "label": "Social Networking Phone",
+    "value": "Yes"
+  },
+  {
+    "label": "Instant Message",
+    "value": "Yes"
+  },
+  {
+    "label": "Business Phone",
+    "value": "No"
+  },
+  {
+    "label": "Removable Battery",
+    "value": "No"
+  },
+  {
+    "label": "MMS",
+    "value": "Yes"
+  },
+  {
+    "label": "SMS",
+    "value": "Yes"
+  },
+  {
+    "label": "Keypad",
+    "value": "No"
+  },
+  {
+    "label": "Voice Input",
+    "value": "Yes"
+  },
+  {
+    "label": "Predictive Text Input",
+    "value": "Yes"
+  },
+  {
+    "label": "Sensors",
+    "value": "Accelerometer, Barometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Hall Sensor, Light Sensor, Proximity Sensor"
+  },
+  {
+    "label": "Upgradable Operating System",
+    "value": "7 OS Upgrade"
+  },
+  {
+    "label": "Browser",
+    "value": "Google Chrome | Samsung Internet"
+  },
+  {
+    "label": "Ringtones Format",
+    "value": "MP3, M4A, 3GA, AAC, OGG, OGA, WAV, AMR, AWB, FLAC, MID, MIDI, XMF, MXMF, IMY, RTTTL, RTX, OTA, DFF, DSF, APE"
+  },
+  {
+    "label": "Other Features",
+    "value": "Circle to Search, Live Translate, Note Assist, Photo Assist, Upto 29 Hours of Video Playback, Upto 78 Hours of Audio Playback, Armor Aluminum Frame, Corning Gorilla Glass Victus 2, IP68 Water Protection, Samsung Care+, Samsung Health, Samsung Wallet"
+  },
+  {
+    "label": "GPS Type",
+    "value": "GPS, GLONASS, BEIDOU, GALILEO, QZSS"
+  },
+  {
+    "label": "FM Radio",
+    "value": "No"
+  },
+  {
+    "label": "FM Radio Recording",
+    "value": "No"
+  },
+  {
+    "label": "DLNA Support",
+    "value": "No"
+  },
+  {
+    "label": "Audio Formats",
+    "value": "MP3, M4A, 3GA, AAC, OGG, OGA, WAV, AMR, AWB, FLAC, MID, MIDI, XMF, MXMF, IMY, RTTTL, RTX, OTA, DFF, DSF, APE"
+  },
+  {
+    "label": "Music Player",
+    "value": "Yes"
+  },
+  {
+    "label": "Video Formats",
+    "value": "MP4, M4V, 3GP, 3G2, AVI, FLV, MKV, WEBM"
+  },
+  {
+    "label": "Battery Capacity",
+    "value": "4000 mAh"
+  },
+  {
+    "label": "Battery Type",
+    "value": "Lithium Ion"
+  },
+  {
+    "label": "Dual Battery",
+    "value": "No"
+  },
+  {
+    "label": "Width",
+    "value": "70.6 mm"
+  },
+  {
+    "label": "Height",
+    "value": "147 mm"
+  },
+  {
+    "label": "Depth",
+    "value": "7.6 mm"
+  },
+  {
+    "label": "Weight",
+    "value": "167 g"
+  },
+  {
+    "label": "Warranty Summary",
+    "value": "1 Year Manufacturer Warranty for Device and 6 Months for In-Box Accessories"
+  },
+  {
+    "label": "Covered in Warranty",
+    "value": "Manufacturing Defects Only"
+  },
+  {
+    "label": "Domestic Warranty",
+    "value": "1 Year"
+  }
+]

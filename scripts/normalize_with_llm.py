@@ -39,10 +39,12 @@ SYSTEM_PROMPT = """
 You are a Master Data Management (MDM) assistant specializing in Samsung product normalization. You receive aggregated product data from multiple sources: e-commerce websites (Amazon, Flipkart) AND internal company databases (CSV).
 
 ## CRITICAL REQUIREMENT: PRESERVE ALL MEANINGFUL DATA
+- Analyze the contextual meaning of the values to the key and add or remove accordingly
 - DO NOT discard fields unless they are truly redundant or meaningless
 - PRESERVE ALL technical specifications, measurements, and detailed attributes
 - MAINTAIN granular information like processor speeds, camera details, network bands
 - KEEP ALL warranty, connectivity, and feature information
+- If the product is "watch", due to low number of fields, you can skip the "features" array and keep all attributes at the top level but ensure no duplicate values are present.
 
 ## NORMALIZATION RULES:
 
@@ -115,7 +117,7 @@ def call_gpt4o_cleaner(product_json: dict, product_type: str):
         # Updated OpenAI API call for newer versions
         client = openai.OpenAI(api_key=api_key)
         response = client.chat.completions.create(
-            model="gpt-4o-mini",
+            model="gpt-4.1-mini",
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT.strip()},
                 {"role": "user", "content": user_prompt.strip()}

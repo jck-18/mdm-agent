@@ -1,175 +1,161 @@
 {
   "20250601": {
-    "brand": "samsung",
-    "series": "galaxy_watch",
-    "color": "silver",
-    "dimensions": {
-      "height": "3 cm",
-      "width": "6 cm",
-      "size": "47mm",
-      "weight": "72 g"
-    },
-    "display": {
-      "size": [
-        "4.3 cm",
-        "1.47 inch"
-      ],
-      "type": "super_amoled",
-      "resolution": "480 x 480 pixel"
-    },
-    "model_number": [
-      "sm-r955fzsainds",
-      "sm-r960"
+    "brand": [
+      "Samsung",
+      "Samsung, Dixon Technologies(india) Ltd., Plot No.6, Sector 90, Noida, Gautam Buddha Nagar, U.P. India"
     ],
-    "connectivity": {
-      "type": [
-        "bluetooth",
-        "lte",
-        "wi-fi"
+    "series": "Galaxy Watch",
+    "model_name": [
+      "Galaxy Watch6 Classic Bluetooth"
+    ],
+    "model_number": [
+      "SM-R955FZSAINS",
+      "SM-R960"
+    ],
+    "color": "Silver",
+    "size": "47mm",
+    "dimensions": "28 x 6 x 3 cm; 72 g",
+    "width": "46.5 mm",
+    "height": "46.5 mm",
+    "thickness": "10.9 mm",
+    "weight": [
+      "72 g",
+      "59 mm"
+    ],
+    "display": {
+      "display_size": [
+        "4.3 Centimetres",
+        "1.47 inch",
+        "1.5\" Super AMOLED, 480 x 480",
+        "1.3\" Super AMOLED, 432 x 432"
       ],
-      "bluetooth": [
-        "v5.3",
-        "yes"
-      ],
-      "wireless_type": [
-        "bluetooth",
-        "5 ghz radio frequency",
-        "802.11a/b/g/n"
-      ],
-      "operating_range": "10 m"
+      "resolution": "480 x 480 Pixel",
+      "display_type": "Super AMOLED",
+      "backlight_display": true,
+      "scratch_resistant": true
     },
     "battery": {
-      "type": "lithium_ion",
-      "description": "lithium-ion",
-      "capacity": {
+      "battery_capacity": {
         "47mm": "425mAh",
         "43mm": "300mAh"
       },
-      "average_life": "40 hours",
-      "rechargeable": true,
-      "included": true,
-      "energy_content": "1.14 watt hours",
-      "weight": "5.4 g"
-    },
-    "os": {
-      "name": "wear_os",
-      "version": "4.0",
-      "internal": "wear_os powered by samsung"
-    },
-    "features": {
-      "general": [
-        "fitness & outdoor",
-        "water_resistant",
-        "yes"
-      ],
-      "water_resistance_depth": "50 m",
-      "sensors": [
-        "accelerometer",
-        "gyro",
-        "barometer",
-        "ambient_light_sensor",
-        "compass",
-        "3d_hall_sensor"
-      ],
-      "health": [
-        "heart_rate_monitor",
-        "calorie_count",
-        "step_count",
-        "sleep_tracking",
-        "personalized_hr_zones"
-      ],
-      "notifications": {
-        "support": true,
-        "types": [
-          "text",
-          "vibrate",
-          "ring"
-        ]
-      },
-      "call_features": [
-        "answer",
-        "reject",
-        "silent_calls",
-        "speed_dial"
-      ],
-      "other_functions": [
-        "one ui 5",
-        "samsung health",
-        "multi 3p apps",
-        "galaxy connected experience",
-        "safety & emergency",
-        "personalized hr zone"
-      ],
-      "gesture_control": [
-        "answer_calls",
-        "dismiss_alerts_and_calls",
-        "quick_launch"
-      ],
-      "voice_control": true,
-      "backlight_display": true,
-      "scratch_resistant": true,
-      "dial_shape": "round",
-      "dial_material": "stainless_steel",
-      "strap_material": "leather",
-      "closure": "pin_buckle",
-      "number_of_buttons": 2,
-      "language": "multi_language"
+      "battery_description": "lithium-ion",
+      "battery_type": "Lithium Ion",
+      "average_battery_life_in_hours": "40 Hours",
+      "battery_life": "Up to 40 hours",
+      "lithium_battery_energy_content": "1.14 Watt Hours",
+      "lithium_battery_weight": "5.4 g",
+      "are_batteries_included": true,
+      "rechargeable_battery": true,
+      "charger_type": "Wireless Charger",
+      "wattage": "45 Watts",
+      "batteries": "1 Lithium Ion batteries required. (included)"
     },
     "processor": {
-      "name": "exynos_w930",
-      "speed": "1.4 ghz",
-      "cores": 2,
-      "internal": "exynos w930, dual-core 1.4ghz"
+      "processor_name": "Exynos W930",
+      "processor_speed": "1.4 GHz",
+      "number_of_cores": "2",
+      "processor_internal": "Exynos W930, Dual-Core 1.4GHz"
     },
-    "internal_memory": "16 gb",
-    "included_components": [
-      "device",
-      "wireless_charger",
-      "quick_setup_guide"
+    "ram": [
+      "2 GB",
+      "2GB"
     ],
-    "sales_package": [
-      "smartwatch",
-      "wireless_charger",
-      "quick_setup_guide"
+    "storage": "16 GB",
+    "storage_internal": "16GB",
+    "os": [
+      "Wear OS 4.0",
+      "Wear OS",
+      "Wear OS Powered by Samsung"
     ],
-    "country_of_origin": "india",
-    "domestic_warranty": "1 year",
-    "other_camera_features": [
-      "mode_switch",
-      "angle_change",
-      "zoom_in/out"
+    "connectivity": [
+      "Bluetooth",
+      "Bluetooth 5.3",
+      "LTE",
+      "Wi-Fi",
+      "Bluetooth, 5 GHz Radio Frequency, 802.11a/b/g/n"
     ],
-    "audio_features": {
+    "bluetooth": [
+      true,
+      "v5.3"
+    ],
+    "wi_fi": true,
+    "gps": true,
+    "nfc": null,
+    "sim": null,
+    "call_function": true,
+    "call_features": "Answer, Reject, Silent Calls, Speed Dial",
+    "messaging_support": true,
+    "email_support": true,
+    "operating_range": "10 m",
+    "notification": true,
+    "notification_type": "Text, Vibrate, Ring",
+    "audio": {
       "speaker": true,
       "microphone": true,
-      "voice_recording": true
+      "audio_features": "Voice Recording"
     },
-    "thickness": "10.9 mm",
-    "width": "46.5 mm",
-    "height": "46.5 mm",
-    "battery_internal": {
-      "47mm": "425mAh",
-      "43mm": "300mAh"
+    "video": null,
+    "camera": {
+      "other_camera_features": "Mode Switch, Angle Change, Zoom-in/out"
     },
-    "features_internal": [
-      "rotating_bezel",
-      "sleep_tracking",
-      "fitness_tracking"
+    "sensors": [
+      "Accelerometer",
+      "Gyro",
+      "Barometer",
+      "Ambient Light Sensor",
+      "Compass",
+      "3D Hall Sensor"
     ],
-    "connectivity_internal": [
-      "lte",
-      "wi-fi",
-      "bluetooth 5.3"
+    "water_resistance": {
+      "water_resistant": true,
+      "water_resistance_depth": "50 m",
+      "durability_internal": "5ATM + IP68, MIL-STD-810H"
+    },
+    "materials": {
+      "dial_material": "Stainless Steel",
+      "strap_material": "Leather",
+      "brand_strap_color": "Silver",
+      "closure": "Pin Buckle"
+    },
+    "features": [
+      "Rotating bezel",
+      "Sleep tracking",
+      "Fitness tracking",
+      "Calorie count",
+      "Step count",
+      "Heart rate monitor",
+      "Personalized HR Zones",
+      "Date & time display",
+      "Compass",
+      "Calendar",
+      "Alarm clock",
+      "Chronograph",
+      "Multi Language",
+      "One UI 5",
+      "Samsung Health",
+      "Multi 3P Apps",
+      "Galaxy Connected Experience",
+      "Safety & Emergency",
+      "Personalized HR Zone",
+      "Gesture control: Answer Calls, Dismiss alerts & calls, Quick Launch",
+      "Voice control"
     ],
-    "durability_internal": [
-      "5atm",
-      "ip68",
-      "mil-std-810h"
-    ],
+    "usage": "Fitness & Outdoor",
+    "ideal_for": "Men & Women",
+    "compatible_os": "Android",
+    "compatible_device": "Android Smartphones & Tablets",
+    "notification_support": true,
+    "number_of_buttons": "2",
+    "domestic_warranty": "1 Year",
+    "included_components": "Device, Wireless charger, Quick Setup Guide",
+    "sales_package": "Smartwatch, Wireless charger, Quick Setup Guide",
+    "country_of_origin": "India",
+    "series_internal": null,
     "_normalization_metadata": {
       "original_fields": 91,
-      "normalized_fields": 24,
-      "field_retention_ratio": 0.26373626373626374,
+      "normalized_fields": 48,
+      "field_retention_ratio": 0.5274725274725275,
       "source_metadata": {
         "scraped_fields": 82,
         "internal_fields": 10,
