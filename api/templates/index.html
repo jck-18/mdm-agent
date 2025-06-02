@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - MDM Agent{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <div class="jumbotron bg-gradient text-white p-5 rounded mb-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <h1 class="display-4">
+                <i class="fas fa-database me-3"></i>
+                MDM Agent Dashboard
+            </h1>
+            <p class="lead">Samsung Product Data Management System</p>
+            <p>Manage and explore normalized product data across phones, TVs, and watches</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Product Data</h5>
+                <p class="card-text">Browse normalized product information for phones, TVs, and watches</p>
+                <a href="{{ url_for('web_products') }}" class="btn btn-primary">
+                    <i class="fas fa-eye me-1"></i>View Products
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-file-pdf fa-3x text-success mb-3"></i>
+                <h5 class="card-title">PDF Brochures</h5>
+                <p class="card-text">Download generated product brochures with detailed specifications</p>
+                <a href="{{ url_for('web_brochures') }}" class="btn btn-success">
+                    <i class="fas fa-download me-1"></i>View Brochures
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <i class="fas fa-code fa-3x text-info mb-3"></i>
+                <h5 class="card-title">REST API</h5>
+                <p class="card-text">Access product data programmatically through our REST endpoints</p>
+                <a href="{{ url_for('web_api_docs') }}" class="btn btn-info">
+                    <i class="fas fa-book me-1"></i>API Documentation
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-chart-bar me-2"></i>
+                    System Statistics
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <div class="border-end">
+                            <h3 class="text-primary" id="product-count">{{ stats.total_products or 0 }}</h3>
+                            <p class="text-muted mb-0">Total Products</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="border-end">
+                            <h3 class="text-success" id="brochure-count">{{ stats.total_brochures or 0 }}</h3>
+                            <p class="text-muted mb-0">PDF Brochures</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="border-end">
+                            <h3 class="text-info" id="image-count">{{ stats.total_images or 0 }}</h3>
+                            <p class="text-muted mb-0">Product Images</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="text-warning" id="data-sources">{{ stats.data_sources or 3 }}</h3>
+                        <p class="text-muted mb-0">Data Sources</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-layer-group me-2"></i>
+                    Data Processing Stages
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="text-center">
+                            <div class="badge bg-secondary p-3 mb-2">
+                                <i class="fas fa-download fa-2x"></i>
+                            </div>
+                            <p class="small"><strong>Raw</strong><br>Scraped data</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="text-center">
+                            <div class="badge bg-primary p-3 mb-2">
+                                <i class="fas fa-layer-group fa-2x"></i>
+                            </div>
+                            <p class="small"><strong>Combined</strong><br>Merged sources</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="text-center">
+                            <div class="badge bg-info p-3 mb-2">
+                                <i class="fas fa-compress fa-2x"></i>
+                            </div>
+                            <p class="small"><strong>Aggregated</strong><br>Consolidated data</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="text-center">
+                            <div class="badge bg-success p-3 mb-2">
+                                <i class="fas fa-check-circle fa-2x"></i>
+                            </div>
+                            <p class="small"><strong>Normalized</strong><br>LLM processed</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="text-center">
+                            <div class="badge bg-warning p-3 mb-2">
+                                <i class="fas fa-table fa-2x"></i>
+                            </div>
+                            <p class="small"><strong>Internal</strong><br>CSV format</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="text-center">
+                            <div class="badge bg-danger p-3 mb-2">
+                                <i class="fas fa-file-pdf fa-2x"></i>
+                            </div>
+                            <p class="small"><strong>Output</strong><br>PDF brochures</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Load real-time statistics
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('/api/stats')
+        .then(response => response.json())
+        .then(data => {
+            if (data.total_products) {
+                document.getElementById('product-count').textContent = data.total_products;
+            }
+            if (data.total_brochures) {
+                document.getElementById('brochure-count').textContent = data.total_brochures;
+            }
+            if (data.total_images) {
+                document.getElementById('image-count').textContent = data.total_images;
+            }
+        })
+        .catch(error => console.log('Could not load statistics:', error));
+});
+</script>
+{% endblock %}

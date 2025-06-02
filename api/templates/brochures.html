@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+
+{% block title %}Brochures - MDM Agent{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>
+        <i class="fas fa-file-pdf me-2"></i>
+        PDF Brochures
+    </h2>
+    <button class="btn btn-success" onclick="refreshBrochures()">
+        <i class="fas fa-sync-alt me-1"></i>
+        Refresh
+    </button>
+</div>
+
+<div id="loadingSpinner" class="text-center d-none">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-2">Loading brochures...</p>
+</div>
+
+<div id="brochureContainer">
+    <!-- Brochures will be loaded here -->
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    loadBrochures();
+});
+
+function loadBrochures() {
+    showSpinner();
+      fetch('/brochures')
+        .then(response => response.json())
+        .then(data => {
+            displayBrochures(data.all_brochures || []);
+        })
+        .catch(error => {
+            console.error('Error loading brochures:', error);
+            document.getElementById('brochureContainer').innerHTML = `
+                <div class="alert alert-danger">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    Failed to load brochures: ${error.message}
+                </div>
+            `;
+        })
+        .finally(() => {
+            hideSpinner();
+        });
+}
+
+function displayBrochures(brochures) {
+    const container = document.getElementById('brochureContainer');
+    
+    if (brochures.length === 0) {
+        container.innerHTML = `
+            <div class="alert alert-info text-center">
+                <i class="fas fa-info-circle me-2"></i>
+                No PDF brochures found. Generate some brochures first.
+            </div>
+        `;
+        return;
+    }
+    
+    // Group brochures by product type
+    const grouped = groupBrochuresByType(brochures);
+    
+    let html = '<div class="row">';
+    
+    Object.entries(grouped).forEach(([productType, files]) => {
+        html += `
+            <div class="col-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            ${getProductIcon(productType)}
+                            ${productType.charAt(0).toUpperCase() + productType.slice(1)} Brochures
+                            <span class="badge bg-primary ms-2">${files.length}</span>
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            ${files.map(file => createBrochureCard(file, productType)).join('')}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+    
+    html += '</div>';
+    container.innerHTML = html;
+}
+
+function groupBrochuresByType(brochures) {
+    const grouped = {};
+    
+    brochures.forEach(filename => {
+        let productType = 'other';
+        if (filename.startsWith('phones_')) productType = 'phones';
+        else if (filename.startsWith('tv_')) productType = 'tv';
+        else if (filename.startsWith('watch_')) productType = 'watch';
+        
+        if (!grouped[productType]) grouped[productType] = [];
+        grouped[productType].push(filename);
+    });
+    
+    return grouped;
+}
+
+function getProductIcon(productType) {
+    const icons = {
+        phones: '<i class="fas fa-mobile-alt me-2"></i>',
+        tv: '<i class="fas fa-tv me-2"></i>',
+        watch: '<i class="fas fa-clock me-2"></i>',
+        other: '<i class="fas fa-file-pdf me-2"></i>'
+    };
+    return icons[productType] || icons.other;
+}
+
+function createBrochureCard(filename, productType) {
+    const fileInfo = parseBrochureFilename(filename);
+    const downloadUrl = `/brochures/download/${filename}`;
+    
+    return `
+        <div class="col-md-6 col-lg-4 mb-3">
+            <div class="card h-100 shadow-sm border-left-${getProductColor(productType)}">
+                <div class="card-body">
+                    <div class="d-flex align-items-start">
+                        <i class="fas fa-file-pdf fa-2x text-danger me-3"></i>
+                        <div class="flex-grow-1">
+                            <h6 class="card-title text-truncate" title="${fileInfo.productName}">
+                                ${fileInfo.productName}
+                            </h6>
+                            <p class="card-text small text-muted mb-2">
+                                <i class="fas fa-calendar me-1"></i>${fileInfo.date}
+                            </p>
+                            <p class="card-text small text-muted">
+                                <i class="fas fa-file me-1"></i>${filename}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <div class="d-grid gap-2">
+                        <a href="${downloadUrl}" class="btn btn-primary btn-sm" target="_blank">
+                            <i class="fas fa-download me-1"></i>Download PDF
+                        </a>
+                        <button class="btn btn-outline-secondary btn-sm" onclick="previewPDF('${filename}')">
+                            <i class="fas fa-eye me-1"></i>Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function parseBrochureFilename(filename) {
+    // Expected format: {product_type}_{date}_{product_name}_brochure.pdf
+    const parts = filename.replace('_brochure.pdf', '').split('_');
+    
+    if (parts.length >= 3) {
+        const productType = parts[0];
+        const date = parts[1];
+        const productName = parts.slice(2).join(' ').replace(/([A-Z])/g, ' $1').trim();
+        
+        return {
+            productType,
+            date: formatDate(date),
+            productName: productName || 'Unknown Product'
+        };
+    }
+    
+    return {
+        productType: 'unknown',
+        date: 'Unknown',
+        productName: filename.replace('.pdf', '')
+    };
+}
+
+function formatDate(dateStr) {
+    if (dateStr && dateStr.length === 8) {
+        const year = dateStr.substring(0, 4);
+        const month = dateStr.substring(4, 6);
+        const day = dateStr.substring(6, 8);
+        return `${year}-${month}-${day}`;
+    }
+    return dateStr;
+}
+
+function getProductColor(productType) {
+    const colors = {
+        phones: 'primary',
+        tv: 'success',
+        watch: 'info',
+        other: 'secondary'
+    };
+    return colors[productType] || colors.other;
+}
+
+function previewPDF(filename) {
+    const previewUrl = `/brochures/download/${filename}`;
+    window.open(previewUrl, '_blank', 'width=800,height=600');
+}
+
+function refreshBrochures() {
+    loadBrochures();
+}
+
+function showSpinner() {
+    document.getElementById('loadingSpinner').classList.remove('d-none');
+}
+
+function hideSpinner() {
+    document.getElementById('loadingSpinner').classList.add('d-none');
+}
+</script>
+
+<style>
+.border-left-primary { border-left: 4px solid #007bff !important; }
+.border-left-success { border-left: 4px solid #28a745 !important; }
+.border-left-info { border-left: 4px solid #17a2b8 !important; }
+.border-left-secondary { border-left: 4px solid #6c757d !important; }
+</style>
+{% endblock %}

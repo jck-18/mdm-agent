@@ -9,7 +9,7 @@ from datetime import datetime
 from typing import Dict, List, Optional, Any
 from pathlib import Path
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template, send_from_directory, url_for, send_from_directory
 from flask_cors import CORS
 from werkzeug.exceptions import NotFound, BadRequest
 
@@ -139,13 +139,19 @@ def get_product_images(product_type: str, date: str = None, source: str = None) 
 
 @app.route("/", methods=["GET"])
 def index():
-    """API information and available endpoints"""
+    """Main route - redirect to web interface or show API info"""
+    # Check if request accepts HTML (from browser)
+    if 'text/html' in request.headers.get('Accept', ''):
+        return web_index()
+    
+    # Otherwise return API information (for API clients)
     return jsonify({
         "service": "MDM Agent REST API",
         "version": "1.0.0",
         "description": "Product data management API for Samsung products",
+        "web_interface": f"{request.host_url}web",
         "endpoints": {
-            "GET /": "This help message",
+            "GET /": "This help message or web interface",
             "GET /health": "Health check",
             "GET /products": "List all available product types and data stages",
             "GET /products/{type}": "Get products by type (default: normalized stage)",
@@ -504,9 +510,126 @@ def get_images_by_type(product_type: str):
         "total_count": len(images),
         "images_by_source_date": images_info,
         "all_images": images,
-        "images_directory": IMAGES_DIR,
+        "images_directory": IMAGES_DIR,        "timestamp": datetime.now().isoformat()
+    })
+
+@app.route("/search", methods=["GET"])
+def search_products():
+    """Search across all product data"""
+    query = request.args.get('q', '').strip()
+    product_type_filter = request.args.get('type', '')
+    stage_filter = request.args.get('stage', 'normalized')
+    
+    if not query:
+        raise BadRequest("Query parameter 'q' is required")
+    
+    if len(query) < 2:
+        raise BadRequest("Query must be at least 2 characters long")
+    
+    results = []
+    search_types = [product_type_filter] if product_type_filter in PRODUCT_TYPES else PRODUCT_TYPES
+    
+    for product_type in search_types:
+        try:
+            data = load_product_data(product_type, stage_filter)
+            
+            if stage_filter == "internal":
+                products = data.get("internal_data", [])
+            elif isinstance(data, dict):
+                products = []
+                for date_key, date_data in data.items():
+                    if isinstance(date_data, list):
+                        products.extend(date_data)
+                    else:
+                        products.append(date_data)
+            else:
+                products = [data]
+            
+            # Search within products
+            for product in products:
+                if isinstance(product, dict):
+                    # Convert product to searchable text
+                    searchable_text = json.dumps(product, default=str).lower()
+                    if query.lower() in searchable_text:
+                        results.append({
+                            "product_type": product_type,
+                            "stage": stage_filter,
+                            "product": product,
+                            "relevance": searchable_text.count(query.lower())
+                        })
+        
+        except (FileNotFoundError, ValueError):
+            continue
+    
+    # Sort by relevance
+    results.sort(key=lambda x: x["relevance"], reverse=True)
+    
+    return jsonify({
+        "query": query,
+        "product_type_filter": product_type_filter,
+        "stage_filter": stage_filter,
+        "total_results": len(results),
+        "results": results[:50],  # Limit to 50 results
         "timestamp": datetime.now().isoformat()
     })
+
+@app.route("/brochures/download/<filename>", methods=["GET"])
+def download_brochure(filename: str):
+    """Download a specific PDF brochure"""
+    try:
+        return send_from_directory(BROCHURES_DIR, filename, as_attachment=True)
+    except FileNotFoundError:
+        raise NotFound(f"Brochure file not found: {filename}")
+
+# === Web Interface Routes ===
+
+@app.route("/web", methods=["GET"])
+@app.route("/web/", methods=["GET"])
+def web_index():
+    """Web interface dashboard"""
+    # Get basic statistics
+    stats = {
+        "total_products": 0,
+        "total_brochures": len(get_available_brochures()),
+        "total_images": 0,
+        "data_sources": len(PRODUCT_TYPES)
+    }
+    
+    for product_type in PRODUCT_TYPES:
+        try:
+            data = load_product_data(product_type, "normalized")
+            if isinstance(data, dict):
+                stats["total_products"] += len(data)
+            else:
+                stats["total_products"] += 1
+        except (FileNotFoundError, ValueError):
+            pass
+        
+        stats["total_images"] += len(get_product_images(product_type))
+    
+    return render_template('index.html', stats=stats)
+
+@app.route("/web/products", methods=["GET"])
+def web_products():
+    """Web interface for products"""
+    return render_template('products.html')
+
+@app.route("/web/brochures", methods=["GET"])
+def web_brochures():
+    """Web interface for brochures"""
+    return render_template('brochures.html')
+
+@app.route("/web/api", methods=["GET"])
+def web_api_docs():
+    """Web interface for API documentation"""
+    base_url = request.host_url.rstrip('/')
+    return render_template('api_docs.html', base_url=base_url)
+
+@app.route("/favicon.ico")
+def favicon():
+    """Serve favicon"""
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                              'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 # === Error Handlers ===
 
@@ -552,12 +675,17 @@ if __name__ == "__main__":
         print(f"  {exists} {product_type}_llm_normalized.json")
     
     print(f"\nStarting API server on http://localhost:5000")
-    print("Available endpoints:")
-    print("  GET / - API documentation")
+    print("Available interfaces:")
+    print("  Web Interface: http://localhost:5000")
+    print("  API Root: http://localhost:5000 (JSON)")
+    print("  API Docs: http://localhost:5000/web/api")
+    print("\nMain endpoints:")
     print("  GET /products - List all product types")
     print("  GET /products/{type} - Get products by type")
     print("  GET /products/{type}/{date} - Get specific product")
     print("  GET /products/{type}/latest - Get latest product")
     print("  GET /search?q={query} - Search products")
+    
+    app.run(debug=True, host="0.0.0.0", port=5000)
     
     app.run(debug=True, host="0.0.0.0", port=5000)
