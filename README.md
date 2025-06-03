@@ -174,25 +174,4 @@ The system provides monitoring through:
 - Processing statistics
 - API usage tracking
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
-
-## 📝 License
-
-This project is proprietary and confidential. All rights reserved.
-
-## 📞 Support
-
-For issues and support:
-1. Check the documentation
-2. Review existing issues
-3. Create a new issue with detailed information
-
----
-
-**Built with ❤️ for Samsung Product Data Management**
