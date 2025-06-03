@@ -83,7 +83,7 @@ body {
 /* API Documentation Styles */
 .endpoint {
     transition: background-color 0.2s ease;
-}
+}                   
 
 .endpoint:hover {
     background-color: #e9ecef !important;
